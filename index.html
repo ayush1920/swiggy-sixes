@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Cricket Score</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="enable-sound" class="sound-tip">🔊 Tap anywhere to enable sound</div>
+    
+    <header>
+      <h1>🏏 Live Cricket Score</h1>
+      <h2 id="promoBanner" class="hidden">🎉 SWIGGY 66% off is available! 🛍️</h2>
+    </header>
+
+    <section class="match-info">
+      <p><strong>Match:</strong> <span id="match-description">Loading...</span></p>
+      <p><strong>Status:</strong> <span id="match-status">Loading...</span></p>
+    </section>
+
+    <div id="miniscoreSection" style="margin: 0px; font-family: sans-serif;">
+      <div id="innings1" style="color: #555; font-size: 16px; margin-bottom: 4px;"></div>
+      <div id="innings2" style="font-size: 20px; font-weight: bold;"></div>
+      <div id="statusLine" style="color: red; margin-top: 6px;"></div>
+    </div>
+    <section class="highlights">
+      <h3>🔥 Recent Boundaries</h3>
+      <p><strong>Last Six:</strong> <span id="last-six">--</span></p>
+      <p><strong>Last Four:</strong> <span id="last-four">--</span></p>
+    </section>
+
+    <section class="commentary">
+      <h3>📢 Commentary</h3>
+      <div id="commentary-list"></div>
+    </section>
+
+    <div class="load-more-container">
+      <button id="loadMoreBtn">🔽 Load More</button>
+    </div>
+  </div>
+
+  <audio id="sixAudio" src="swiggy_six.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
