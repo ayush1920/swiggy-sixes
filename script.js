@@ -93,8 +93,9 @@ function updateMiniScore(miniscore) {
   const [firstInnings, secondInnings] = details.inningsScoreList;
   console.log(firstInnings);
   const team1Short = teamMap[firstInnings.batTeamId];
+  let team2Short = undefined
   if (secondInnings) {
-    const team2Short = teamMap[secondInnings.batTeamId];
+    team2Short = teamMap[secondInnings.batTeamId];
   }
 
   // Format overs
