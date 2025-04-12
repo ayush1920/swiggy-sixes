@@ -71,6 +71,9 @@ function enableSoundOnUserInteraction() {
 enableSoundOnUserInteraction();
 
 async function fetchCommentary() {
+  if (!matchId) {
+    return 
+  }
   const res = await fetch(`https://www.cricbuzz.com/api/cricket-match/commentary/${matchId}`);
   const data = await res.json();
   const match = data.matchHeader;
@@ -91,7 +94,6 @@ function updateMiniScore(miniscore) {
   });
 
   const [firstInnings, secondInnings] = details.inningsScoreList;
-  console.log(firstInnings);
   const team1Short = teamMap[firstInnings.batTeamId];
   let team2Short = undefined
   if (secondInnings) {
