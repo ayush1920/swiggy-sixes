@@ -183,16 +183,16 @@ function renderCommentary(comments) {
     });
     commText = overNumber + commText;
 
-    const fullText = (commText + " " + boldValues.join(" ")).toLowerCase();
+    const highlightValues = boldValues.join(" ").toLowerCase()
     const timestamp = new Date(Number(item.timestamp));
 
-    if (fullText.includes("six")) {
+    if (highlightValues.includes("six")) {
       if (!latestSix || timestamp > latestSix.time) {
         latestSix = { text: commText, time: timestamp };
       }
     }
 
-    if (fullText.includes("four")) {
+    if (highlightValues.includes("four")) {
       if (!latestFour || timestamp > latestFour.time) {
         latestFour = { text: commText, time: timestamp };
       }
