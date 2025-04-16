@@ -11,7 +11,6 @@ let latestSix = null;
 let lastSixTime = null;
 let promoWasShown = false;
 let latestFour = null;
-let audioUnlocked = false;
 let soundTriggered = false;
 let matchId = null;
 
@@ -52,11 +51,10 @@ async function getMatchIdAndStart() {
 
 function enableSoundOnUserInteraction() {
   const unlock = () => {
-    audioUnlocked = true;
+    document.getElementById("enable-sound").style.display = "none";
     if (promoWasShown && !soundTriggered) {
       soundTriggered = true;
 
-      document.getElementById("enable-sound").style.display = "none";
       setTimeout(() => {
         playSixSound();
       }, 1000);
